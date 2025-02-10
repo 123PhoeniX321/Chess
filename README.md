@@ -1,35 +1,25 @@
-* Features
+## Features
+* Implements Bubble Sort, Insertion Sort, Quick Sort, and Selection Sort.
+* Supports numeric and character-based lists for sorting pieces.
+* CLI Parameter Support: Users can select sorting algorithm, piece type, piece color, quantity, and speed.
 
-Implements Bubble Sort, Insertion Sort, Quick Sort, and Selection Sort.
+## Installation & Setup Requirements
+* Java 17 (JDK 17)
+* Apache Maven (must work with JDK 17)
+* Git (optional, for cloning the repository)
+Clone the repository: https://github.com/123PhoeniX321/Chess.git
 
-Supports numeric and character-based lists for sorting pieces.
+## How to run the Program
+* Run the CLI Version via IDE 
+  * Open Main.java in your IDE and add CLI arguments: java CHESS a=b t=c c=w r=8 s=200
+* Run the CLI Version via Terminal
+  * Using Maven:  mvn javafx:run -Djavafx.args="a=b t=c c=w r=16 s=200"
+* Run the JavaFX GUI (when implemented)
+* Building: 
+  * Compile the project: mvn clean compile
 
-CLI Parameter Support: Select sorting algorithm, piece type, quantity, and speed.
 
-JavaFX GUI (to be implemented).
-
-* Installation & Setup
-Requirements
-
-Java 17 (JDK 17)
-
-Apache Maven
-
-Git (optional, for cloning)
-
-Clone the repository
-https://github.com/123PhoeniX321/Chess.git
-
-Run the CLI Version
-mvn clean compile exec:java
-
-Run the JavaFX GUI (when implemented)
-mvn javafx:run
-
-* Building
-
-mvn clean compile
-
-* Upcoming features
-
-Implement JavaFX GUI
+## Upcoming features
+* Implement chess board and pieces
+* Implement more sorting algorithms
+* Develop JavaFX GUI for visualization.
