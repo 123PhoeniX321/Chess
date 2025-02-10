@@ -1,12 +1,16 @@
 package com.capstoneproject;
 
-import com.capstoneproject.view.SortingView;
-import javafx.application.Application;
+import com.capstoneproject.controller.SortingController;
+import com.capstoneproject.controller.CliController;
 
 public class Main {
-
     public static void main(String[] args) {
-        Application.launch(SortingView.class, args); // Lanza la interfaz de JavaFX
-    }
 
+        CliController cliController = new CliController(args);
+        cliController.printCliParameters(args);
+
+        SortingController sortingController = new SortingController(cliController);
+        sortingController.printParametersValues();
+
+    }
 }
