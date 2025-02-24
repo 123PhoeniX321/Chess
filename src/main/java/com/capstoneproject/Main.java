@@ -1,16 +1,16 @@
 package com.capstoneproject;
 
-import com.capstoneproject.controller.SortingController;
-import com.capstoneproject.controller.CliController;
+import com.capstoneproject.controller.ChessController;
 
+/**
+ * Main class for the CHESS application.
+ * Entry point that initializes and starts the ChessController.
+ */
 public class Main {
     public static void main(String[] args) {
 
-        CliController cliController = new CliController(args);
-        cliController.printCliParameters(args);
-
-        SortingController sortingController = new SortingController(cliController);
-        sortingController.printParametersValues();
+        ChessController<?> controller = new ChessController<>(args);
+        controller.start();
 
     }
 }

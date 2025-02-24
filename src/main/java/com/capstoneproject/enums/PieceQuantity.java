@@ -1,5 +1,8 @@
 package com.capstoneproject.enums;
 
+/**
+ * Enumeration representing the available piece quantitys.
+ */
 public enum PieceQuantity {
     ONE("1"),
     TWO("2"),

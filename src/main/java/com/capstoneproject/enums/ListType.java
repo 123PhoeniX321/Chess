@@ -1,5 +1,8 @@
 package com.capstoneproject.enums;
 
+/**
+ * Enumeration representing the available list types.
+ */
 public enum ListType {
     NUMERIC("n", "Numerico"),
     CHARACTER("c", "Caracter");

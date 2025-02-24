@@ -1,5 +1,8 @@
 package com.capstoneproject.enums;
 
+/**
+ * Enumeration representing the available CLI parameters.
+ */
 public enum CliParameter {
     SORTING_ALGORITHM("a"),
     LIST_TYPE("t"),

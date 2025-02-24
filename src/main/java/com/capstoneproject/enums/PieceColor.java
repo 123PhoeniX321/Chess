@@ -1,5 +1,8 @@
 package com.capstoneproject.enums;
 
+/**
+ * Enumeration representing the available piece colors.
+ */
 public enum PieceColor {
     BLACK("b", "Negras"),
     WHITE("w", "Blancas");

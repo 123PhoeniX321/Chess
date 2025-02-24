@@ -1,5 +1,5 @@
 ## Features
-* Implements Bubble Sort, Insertion Sort, Quick Sort, and Selection Sort.
+* Implements Bubble Sort, Insertion Sort and Selection Sort.
 * Supports numeric and character-based lists for sorting pieces.
 * CLI Parameter Support: Users can select sorting algorithm, piece type, piece color, quantity, and speed.
 

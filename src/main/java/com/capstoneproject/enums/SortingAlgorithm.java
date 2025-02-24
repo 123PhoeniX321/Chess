@@ -1,14 +1,12 @@
 package com.capstoneproject.enums;
 
+/**
+ * Enumeration representing the available sorting algorithms.
+ */
 public enum SortingAlgorithm {
-    SELECTION_SORT("s", "Selection sort"),
-    BUBBLE_SORT("b", "Bubble sort"),
-    INSERTION_SORT("i", "Insertion sort"),
-    MERGE_SORT("m", "Merge sort"),
-    QUICK_SORT("q", "Quick sort"),
-    HEAP_SORT("h", "Heap sort"),
-    COUNTING_SORT("c", "Counting sort"),
-    RADIX_SORT("r", "Radix sort");
+    SELECTION_SORT("s", "SelectionSort"),
+    BUBBLE_SORT("b", "BubbleSort"),
+    INSERTION_SORT("i", "InsertionSort");
 
     private final String symbol;
     private final String sortingAlgorithmName;

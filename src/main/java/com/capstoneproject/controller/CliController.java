@@ -2,6 +2,10 @@ package com.capstoneproject.controller;
 
 import com.capstoneproject.enums.*;
 
+/**
+ * Processes command-line parameters for the CHESS application.
+ * Maps CLI arguments to corresponding enums and validates them.
+ */
 public class CliController {
 
     private SortingAlgorithm sortingAlgorithm;
@@ -14,6 +18,12 @@ public class CliController {
         captureParameters(args);
     }
 
+    /**
+     * Processes the command-line arguments and assigns the corresponding values
+     * to the controller's fields based on the parameter symbols.
+     *
+     * @param args the command-line arguments, expected in the format "key=value"
+     */
     private void captureParameters(String[] args) {
         for (String arg : args) {
             String[] partsParameter = arg.split("=");
@@ -43,17 +53,29 @@ public class CliController {
     }
 
     /**
-     * Validates the parameters entered by CLI.
-     * Currently, this method does not take into account the speed of each
-     * step of the algorithm, as these were not considered in the examples.
+     * Validates that all required parameters have been provided and are valid.
      *
-     * @return true if the parameters are valid, false otherwise
+     * @return true if sortingAlgorithm, listType, pieceColor, pieceQuantity, and stepSpeed are not null; false otherwise.
      */
     public boolean areValidParameters() {
         return sortingAlgorithm != null &&
                 listType != null &&
                 pieceColor != null &&
-                pieceQuantity != null;
+                pieceQuantity != null &&
+                stepSpeed != null;
+    }
+
+
+    /**
+     * Checks if the necessary parameters for generating the list are available.
+     * Typically, these are listType, pieceQuantity, and pieceColor.
+     *
+     * @return true if listType, pieceQuantity, and pieceColor are not null, false otherwise.
+     */
+    public boolean listCanBeGenerated() {
+        return listType != null &&
+                pieceQuantity != null &&
+                pieceColor != null;
     }
 
     public SortingAlgorithm getSortingAlgorithm() {
@@ -97,6 +119,22 @@ public class CliController {
             return pieceColor.getColorName();
         } catch (Exception e) {
             return "Invalido";
+        }
+    }
+
+    public String getPieceQuantityValue() {
+        try {
+            return pieceQuantity.getSymbol();
+        } catch (Exception e) {
+            return "Invalido";
+        }
+    }
+
+    public String getStepSpeedValue() {
+        if (stepSpeed == null) {
+            return "Invalido";
+        } else {
+            return stepSpeed;
         }
     }
 
